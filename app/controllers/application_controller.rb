@@ -33,14 +33,14 @@ end
    # Read /show 
    get '/articles/:id' do
     @article = Article.find(params[:id])
-    erb :show
+    erb :"show"
   end
 
   #edit 
 
    get '/articles/:id/edit' do 
     @article = Article.find(params[:id])
-    erb :edit 
+    erb :"edit"
   end 
 
   patch '/articles/:id/edit' do
